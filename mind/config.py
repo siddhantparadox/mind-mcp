@@ -17,7 +17,7 @@ OPENROUTER_BASE = os.getenv("OPENROUTER_BASE", "https://openrouter.ai/api/v1")
 OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
 
 MIND_EMBEDDING_MODEL = os.getenv("MIND_EMBEDDING_MODEL", "qwen/qwen3-embedding-8b")
-MIND_LLM_MODEL = os.getenv("MIND_LLM_MODEL", "qwen/qwen-2.5-7b-instruct")
+MIND_LLM_MODEL = os.getenv("MIND_LLM_MODEL", "google/gemini-2.5-flash-lite-preview-09-2025")
 MIND_EMBEDDING_DIM = int(os.getenv("MIND_EMBEDDING_DIM", "4096"))
 
 AI_ASSIST_ENABLED = os.getenv("MIND_AI_ASSIST", "true").lower() == "true"

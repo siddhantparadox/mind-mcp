@@ -79,9 +79,14 @@ async def create_memory(
             ai_guess = {}
 
     resolved_type = type_ if type_ not in (None, "auto") else ai_guess.get("type")
+    if not resolved_type:
+        # Fallback so every memory has a reasonable type
+        resolved_type = "note"
+
     resolved_tags = tags if tags is not None else ai_guess.get("tags")
     resolved_importance = importance if importance is not None else ai_guess.get("importance")
     resolved_summary = summary if summary is not None else ai_guess.get("summary")
+
 
     ts = now_ts()
     memory_uuid = str(uuid4())
